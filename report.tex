@@ -1,0 +1,110 @@
+\documentclass[logo=images/logo.png]{tehranReport}
+\usepackage[inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xepersian}
+\usepackage{footnote}
+\usepackage{pifont}
+
+\settextfont{XB Niloofar}
+\lstset{
+    language=Python,
+    columns=flexible,
+    basicstyle=\ttfamily,
+    numbers=left,
+    numberstyle=\footnotesize\color{brown},
+    keywordstyle=\bfseries\color{blue},
+    keywordstyle={[2]\color{red}},
+    keywordstyle={[3]\color{green}},
+    commentstyle=\color{gray},
+    stringstyle=\color{brown},
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4
+}
+
+\title{تمرین شماره‌ی ۱}
+\author{علی رنجبر}
+\authorPosition{دانشجوی کارشناسی مهندسی برق~-~مخابرات}
+\university{دانشگاه تهران}
+\college{پردیس دانشکده‌های فنی\\دانشکدهٔ مهندسی برق و کامپیوتر}
+\studentNumber{810194321}
+\course{آزمایشگاه آنتن (بهار ۹۸)}
+\supervisor{دکتر کریم محمدپور اقدم}
+
+\tolerance=5000
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newcommand{\cmark}{\textcolor{green!80!black}{\ding{51}}}
+\newcommand{\xmark}{\textcolor{red}{\ding{55}}}
+
+\makesavenoteenv{tabular}
+
+\begin{document}
+    \maketitlepage
+
+    \section*{مقایسه تجهیزات اندازه‌گیری}
+    
+
+    \subsection*{مولدهای سیگنال\LTRfootnote{Signal Generators}}
+	
+	\begin{center}
+		\begin{latin}
+			\begin{tabular}{|c || c c|}
+				\cline{2-3}
+				\multicolumn{1}{c}{}&\multicolumn{1}{|c}{\textbf{E8257D-Agilent}}&\multicolumn{1}{c|}{\textbf{E8267D-Aginlent}}\\
+				\hline\hline
+			    Model & Analog Signal Generator & Vector Signal Generator\\
+			    \hline
+			    Step attenuator & optional & 0 to 115 dB in 5 dB steps \\ 
+			    \hline
+			    reference oscillator & 10 MHz & 10 MHz\\
+			    \hline
+			    Interfaces & \multicolumn{2}{c|}{RS–232, GPIB, and 10Base–T }\\
+			    \hline
+			    \multicolumn{3}{|l|}{\cellcolor[HTML]{F0F0F0}\textbf{Frequency}}\\
+				\hline
+				Range & 250 KHz to 67 GHz & 250 KHz to 44 GHz\\
+				\hline
+				Resolution & 0.001‌ Hz& 0.001 Hz\\
+				\hline
+				\multicolumn{3}{|l|}{\cellcolor[HTML]{F0F0F0}\textbf{Output}}\\
+				\hline
+				Minimum output power(dBm) & -20 (-135\footnote{With Option 1E1 step attenuator}) & -130\\
+				\hline
+				Maximum output power(dBm) & +28 & +21\\
+				\hline
+			\end{tabular}
+		\end{latin}
+	\end{center}
+	
+	\subsection*{تحلیل‌گر طیف\LTRfootnote{Spectrum Analyzers}}
+	
+	\begin{center}
+		\begin{latin}
+			\begin{tabular}{|c || c c|}
+				\cline{2-3}
+				\multicolumn{1}{c}{}&\multicolumn{1}{|c}{\textbf{E4448A-Agilent}}&\multicolumn{1}{c|}{\textbf{E4407B-Aginlent}}\\
+				\hline\hline
+				Families & PSA & ESA-E\\
+				\hline
+				Frequency Range(DC coupled) & 3 Hz to 50 GHz (325 GHz\footnote{With external mixers}) & 100 Hz to 26.5 GHz\\
+				\hline
+				Amplitude accuracy & 0.19 dB & 0.4 dB\\ 
+				\hline
+				Analysis bandwidth & 10(Standard), 40, 80 MHz & 10 MHz\\
+				\hline
+				Standard Attenuator Range & 70 dB(in 2 dB steps) & 60 dB(in 10 dB steps)\\
+				\hline
+			\end{tabular}
+		\end{latin}
+	\end{center}
+\end{document}
